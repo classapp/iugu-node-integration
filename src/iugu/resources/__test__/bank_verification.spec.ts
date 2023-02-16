@@ -6,7 +6,7 @@ test('should return route name', async () => {
 });
 
 test('should verify bank domicile', async () => {
-  const apiResponse = {
+  const apiResponse = [{
     "id": "F7D999A13D17459991A77456F061C3E0",
     "status": "pending",
     "created_at": "2017-10-05T14:31:32-03:00",
@@ -16,7 +16,7 @@ test('should verify bank domicile', async () => {
     "operation": null,
     "feedback": null,
     "bank": "Bradesco"
-  }
+  }]
   const apiKey = '123456789'
   Iugu.setApiKey(apiKey)
   const scope = nock('https://api.iugu.com/v1')

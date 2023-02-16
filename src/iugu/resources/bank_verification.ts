@@ -7,8 +7,8 @@ class IuguBankVerification extends IuguCommon<DefaultResponse> {
     return 'bank_verification'
   }
 
-  async verifyBankDomicile (data: string | object, urlParams?: Map<string, string> | undefined, queryParams?: Map<string, string> | undefined): Promise<IuguBankDomicile> {
-    return IuguMethods.createIuguMethod<IuguBankDomicile>({
+  async verifyBankDomicile (data: string | object, urlParams?: Map<string, string> | undefined, queryParams?: Map<string, string> | undefined): Promise<IuguBankDomicile[]> {
+    return IuguMethods.createIuguMethod<IuguBankDomicile[]>({
       method: 'get',
       path: '/' + this.routeName,
       urlParams: []
