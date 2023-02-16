@@ -183,8 +183,8 @@ export interface IuguInvoice {
   logs?: IuguLog[];
 }
 
-export interface IuguPixConfigResponse {
-  success: true;
+export interface DefaultResponse {
+  success?: boolean;
 }
 
 interface IuguConfigAccountPix {
