@@ -1,4 +1,4 @@
-import { DefaultResponse } from '../models'
+import { DefaultResponse, IuguBankDomicile } from '../models'
 import IuguMethods from '../iugu_methods'
 import IuguCommon from './common'
 
@@ -7,8 +7,8 @@ class IuguBankVerification extends IuguCommon<DefaultResponse> {
     return 'bank_verification'
   }
 
-  async verifyBankDomicile (data: string | object, urlParams?: Map<string, string> | undefined, queryParams?: Map<string, string> | undefined): Promise<DefaultResponse> {
-    return IuguMethods.createIuguMethod<DefaultResponse>({
+  async verifyBankDomicile (data: string | object, urlParams?: Map<string, string> | undefined, queryParams?: Map<string, string> | undefined): Promise<IuguBankDomicile> {
+    return IuguMethods.createIuguMethod<IuguBankDomicile>({
       method: 'get',
       path: '/' + this.routeName,
       urlParams: []

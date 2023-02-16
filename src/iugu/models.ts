@@ -187,6 +187,17 @@ export interface DefaultResponse {
   success?: boolean;
 }
 
+export interface IuguBankDomicile {
+    id: string,
+    status: string,
+    created_at: string,
+    updated_at: string,
+    account: string,
+    agency: string,
+    operation: boolean,
+    feedback: boolean,
+    bank: string
+}
 interface IuguConfigAccountPix {
   active: boolean;
 }
