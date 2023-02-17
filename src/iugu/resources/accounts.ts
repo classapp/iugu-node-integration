@@ -3,6 +3,15 @@ import IuguMethods from '../iugu_methods'
 import { IuguConfigAccount, IuguVerificationAccount, IuguInfoAccount, IuguWithdrawRequest } from '../models'
 
 class IuguAccounts extends IuguCommon<IuguInfoAccount> {
+
+  async updateSubAccount (data: string | object, urlParams?: Map<string, string> | undefined, queryParams?: Map<string, string> | undefined): Promise<IuguInfoAccount> {
+    return IuguMethods.createIuguMethod<IuguInfoAccount>({
+      method: 'put',
+      path: '/' + this.routeName + '/{id}',
+      urlParams: ['id']
+    })(data, urlParams)
+  }
+
   async requestVerification (data: string | object, urlParams?: Map<string, string> | undefined, queryParams?: Map<string, string> | undefined): Promise<IuguVerificationAccount> {
     return IuguMethods.createIuguMethod<IuguVerificationAccount>({
       method: 'post',
