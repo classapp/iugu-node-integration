@@ -12,6 +12,8 @@
     "test:cov": "npm run test -- --coverage",
     "doc": "npx typedoc --out ./docs --mode file ./lib",
     "build": "npx tsc -p ./tsconfig.json",
+    "lint": "npx eslint \"{src,apps,libs,test}/**/*.ts\" && npm run tsc:check",
+    "lint:fix": "npm run lint -- --fix",
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
     "postversion": "git push && git push --tags"
