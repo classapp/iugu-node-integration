@@ -4,6 +4,9 @@
   "description": "Unofficial Iugu library for NodeJS",
   "main": "lib/iugu.js",
   "types": "lib/iugu.d.ts",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "test": "jest",
     "test:cov": "npm run test -- --coverage",
@@ -52,8 +55,8 @@
     "nock": "^13.2.9",
     "pretty-format": "^25.1.0",
     "ts-node": "^10.9.1",
-    "typedoc": "^0.16.10",
-    "typedoc-plugin-no-inherit": "^1.1.10",
+    "typedoc": "^0.23.25",
+    "typedoc-plugin-no-inherit": "^1.4.0",
     "typescript": "^4.8.3"
   },
   "dependencies": {

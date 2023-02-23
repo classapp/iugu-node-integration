@@ -1,0 +1,13 @@
+node_modules
+
+/tests/iugu_services.json
+
+.DS_Store
+build
+npm-debug.log
+.env
+docs
+dist
+lib
+
+/__coverage
