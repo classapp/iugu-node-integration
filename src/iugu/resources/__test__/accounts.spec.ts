@@ -5,6 +5,27 @@ test('should return route name', async () => {
   expect(Iugu.accounts.routeName).toBe('accounts')
 })
 
+test('should update subaccount', async () => {
+  const accountId = new Map().set('id', '1234')
+  const data = {
+    name :'New Account Name'
+  }
+
+  const apiResponse = {
+    id: '1234',
+    name: 'New Account Name',
+  }
+
+  const apiKey = '123456789'
+  Iugu.setApiKey(apiKey)
+  nock('https://api.iugu.com/v1')
+    .put('/accounts/1234', data)
+    .reply(200, apiResponse)
+
+  const response = await Iugu.accounts.updateSubAccount(data, accountId)
+
+  expect(response).toEqual(apiResponse)
+})
 test('should verify account', async () => {
   const apiKey = process.env.SUBACCOUNT_TEST_API_KEY || 'E5488635EC916E8889EEDE7274DB0142C3103AB0BCEAA2361999C740234DF185'
   Iugu.setApiKey(apiKey)

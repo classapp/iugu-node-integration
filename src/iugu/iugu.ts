@@ -9,6 +9,7 @@ import IuguPlans from './resources/plans'
 import IuguSubscriptions from './resources/subscriptions'
 import IuguTransfers from './resources/transfers'
 import IuguPayments from './resources/payments'
+import IuguBankVerification from './resources/bank_verification'
 
 class Iugu {
   public get customers (): typeof IuguCustomers {
@@ -17,6 +18,10 @@ class Iugu {
 
   public get paymentToken (): typeof IuguPaymentsTokens {
     return IuguPaymentsTokens
+  }
+
+  public get bankVerification (): typeof IuguBankVerification {
+    return IuguBankVerification
   }
 
   public get invoices (): typeof IuguInvoices {
