@@ -2,8 +2,8 @@
   "name": "iugu-node-integration",
   "version": "1.0.0",
   "description": "Unofficial Iugu library for NodeJS",
-  "main": "lib/iugu.js",
-  "types": "lib/iugu.d.ts",
+  "main": "src/iugu.js",
+  "types": "src/iugu.d.ts",
   "engines": {
     "node": ">=16.0.0"
   },
