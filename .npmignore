@@ -1,0 +1,8 @@
+node_modules
+test
+coverage
+.vscode
+!dist
+jest.config.js
+.eslintrc.js
+tsconfig.json
