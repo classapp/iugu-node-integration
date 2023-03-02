@@ -1,10 +1,10 @@
-# @classapp-tech/iugu-node-lib
+# @classapp-tech/iugu-node-integration
 
 ## Installation
 Use the package manager node to install.
 
 ```bash
-npm install @classapp-tech/iugu-node-lib
+npm install @classapp-tech/iugu-node-integration
 ```
 
 ## Usage
