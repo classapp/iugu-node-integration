@@ -1,0 +1,10 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  pr-actions:
+    uses: classapp/cicada/.github/workflows/pr-patterns.yml@main
+    secrets: inherit
